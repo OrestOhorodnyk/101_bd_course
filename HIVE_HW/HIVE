@@ -1,0 +1,6 @@
+HIVE
+
+# copy files to sandbox-hdp
+cd ~/Documents/HIVE/test_data/
+docker cp test_data/. sandbox-hdp:/usr/local/etc
+

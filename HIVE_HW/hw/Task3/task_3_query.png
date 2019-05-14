@@ -1,0 +1,8 @@
+-- Write hive script to calculate top 3 most popular hotels (treat hotel as composite key of continent, country and market) which were not booked. 
+-- Most popular means most searches in dataset. Not booked means column booked = 0
+SELECT t.hotel_continent, t.hotel_country, t.hotel_market, count(*) as hotel_count
+FROM train AS t
+WHERE t.is_booking = 0
+GROUP BY t.hotel_continent, t.hotel_country, t.hotel_market
+ORDER BY hotel_count DESC
+LIMIT 3;

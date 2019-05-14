@@ -1,0 +1,51 @@
+id, STRING,
+date_time TIMESTAMP,
+site_name STRING,
+posa_continent STRING,
+user_location_country STRING,
+user_location_region STRING,
+user_location_city STRING,
+orig_destination_distance FLOAT,
+user_id STRING, 
+is_mobile STRING,
+is_package BOOLEAN,
+channel STRING, 
+srch_ci DATE,
+srch_co DATE, 
+srch_adults_cnt INT,
+srch_children_cnt INT,
+srch_rm_cnt INT,
+srch_destination_id STRING,
+srch_destination_type_id STRING,
+hotel_continent STRING,
+hotel_country STRING,
+hotel_market STRING
+
+
+
+
+
+
+
+0
+2015-09-03 17:09:54
+2
+3
+66
+174
+37449
+5539.0567
+1
+1
+0
+3
+2016-05-19
+2016-05-23
+2
+0
+1
+12243
+6
+6
+204
+27
