@@ -1,0 +1,13 @@
+ELK_to_HDP
+1) python /var/lib/ambari-server/resources/scripts/configs.py -u admin -p admin -n Sandbox -l sandbox-hdp.hortonworks.com -t 8080 -a set -c cluster-env -k  ignore_groupsusers_create -v true
+2) wget https://raw.githubusercontent.com/steven-dfheinz/dfhz_elk_mpack/master/elasticsearch_mpack-3.0.0.0-1.tar.gz
+3) ambari-server install-mpack --mpack=elasticsearch_mpack-3.0.0.0-1.tar.gz --verbose
+4) ambari-server restart
+5) add elastikseach and kibana services via ambari ua
+6) run `sudo systemctl edit elasticsearch` and add the following to the file 
+[Service]
+LimitMEMLOCK=infinity
+7) save the file and run `sudo systemctl daemon-reload` for more detailse followe the link bellow
+https://www.elastic.co/guide/en/elasticsearch/reference/5.6/setting-system-settings.html#systemd
+
+
